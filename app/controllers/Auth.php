@@ -175,6 +175,7 @@ class Auth extends Controller
             }
             $_SESSION['user_id'] = $user->id;
             $_SESSION['username'] = $user->username;
+            $_SESSION['role'] = $user->role; // <<< ADD THIS LINE TO SAVE THE ROLE
             $_SESSION['is_logged_in'] = true; 
             
             // --- CRITICAL FIX: Ensures session data is saved before redirect ---
@@ -182,7 +183,7 @@ class Auth extends Controller
                 session_write_close();
             }
             
-            // ENHANCED SUCCESS MESSAGE 2
+            // ENHANCED SUCCESS MESSAGE 2    
             set_flash_alert('success', 'Welcome back, ' . htmlspecialchars($user->username) . '! Redirecting you to the dashboard.');
 
             // Redirect to dashboard

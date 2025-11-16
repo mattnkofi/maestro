@@ -63,7 +63,7 @@ $database['main'] = array(
     'port'		=> '3306',
     'username'	=> 'root',
     'password'	=> '',
-    'database'	=> 'maestrolavalust',
+    'database'	=> 'maestro',
     'charset'	=> 'utf8mb4',
     'dbprefix'	=> '',
     // Optional for SQLite
